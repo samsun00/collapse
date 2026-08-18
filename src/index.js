@@ -3,7 +3,7 @@ import Collapse from './Collapse.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Создаем экземпляр Collapse для каждого контейнера
-    const containers = document.querySelectorAll('.collapse-container');
+    const containers = document.querySelectorAll('.collapse-wrapper');
 
     containers.forEach((container, index) => {
     // Добавляем уникальный id если его нет

@@ -1,6 +1,6 @@
 # Collapse Widget
 
-[![Build status](https://ci.appveyor.com/api/projects/status/8wxec3aa71ulddg2?svg=true)](https://ci.appveyor.com/project/samsun00/collapse)
+[![Deploy to GitHub Pages](https://github.com/samsun00/collapse/actions/workflows/deploy.yml/badge.svg)](https://github.com/samsun00/collapse/actions/workflows/deploy.yml)
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://samsun00.github.io/collapse)
 
@@ -34,9 +34,7 @@ npm install
 npm start
 
 # Соберите проект
-npm build
+npm run build
 
-# Деплой на GitHub Pages (вручную)
-npm run deploy
 
 ```
