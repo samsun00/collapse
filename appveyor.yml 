@@ -1,0 +1,30 @@
+image: Ubuntu1804
+stack: node 18
+branches:
+  only:
+    - master
+    - main
+
+cache:
+  - node_modules
+
+install:
+  - npm install
+
+build: off
+
+build_script:
+  - npm run build
+
+test: off
+
+deploy_script:
+  - git config --global credential.helper store
+  - git config --global user.name "Appveyor"
+  - git config --global user.email "appveyor@example.com"
+  - git remote set-url origin https://$GITHUB_TOKEN@github.com/$APPVEYOR_REPO_NAME.git
+  - npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>"
+
+environment:
+  GITHUB_TOKEN:
+    secure: tNDv3dwwmJ5LMaWN1qT3bJ7oHeFNx0e4RMa6SbQ27eT2mjoyNdtn5WPn17VmtI2s
