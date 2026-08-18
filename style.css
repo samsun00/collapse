@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  color: #2d3748;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.collapse-container {
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.collapse-container:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.collapse-btn {
+  width: 100%;
+  padding: 16px 24px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2d3748;
+  transition: background-color 0.3s ease;
+}
+
+.collapse-btn:hover {
+  background-color: #f7fafc;
+}
+
+.collapse-btn:focus {
+  outline: none;
+  background-color: #edf2f7;
+}
+
+.arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.collapse-body {
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  opacity: 0;
+  background: #f7fafc;
+}
+
+.collapse-content {
+  padding: 20px 24px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.collapse-content p {
+  margin-bottom: 12px;
+}
+
+.collapse-content p:last-child {
+  margin-bottom: 0;
+}
+
+.collapse-content ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.collapse-content li {
+  margin-bottom: 8px;
+}
+
+/* Анимация для стрелки */
+.collapse-btn.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Стили для разных состояний */
+.collapse-container.open .collapse-body {
+  opacity: 1;
+}
+
+/* Адаптивность */
+@media (max-width: 640px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .collapse-btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  .collapse-content {
+    padding: 16px 20px;
+  }
+}
+
