@@ -1,7 +1,8 @@
 # Collapse Widget
 
-[![Deploy](https://github.com/samsun00/collapse/actions/workflows/deploy.yml/badge.svg)](https://github.com/samsun00/collapse/actions/workflows/deploy.yml)
-[![GitHub Pages](https://img.shields.io/badge/demo-online-green)](https://samsun00.github.io/collapse/)
+[![Build status](https://ci.appveyor.com/api/projects/status/8wxec3aa71ulddg2?svg=true)](https://ci.appveyor.com/project/samsun00/collapse)
+
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://samsun00.github.io/collapse)
 
 Виджет сворачивающихся/разворачивающихся блоков на чистом JavaScript.
 
