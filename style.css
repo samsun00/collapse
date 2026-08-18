@@ -34,68 +34,66 @@ h1 {
   letter-spacing: -0.5px;
 }
 
-.collapse-container {
-  margin-bottom: 20px;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
-}
-
-.collapse-container:hover {
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+.collapse-wrapper {
+  margin-bottom: 15px;
 }
 
 .collapse-btn {
-  width: 100%;
-  padding: 16px 24px;
-  background: white;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: inline-block;
+  padding: 8px 16px;
+  background: #0d6efd;
+  color: #fff;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
   font-size: 16px;
-  font-weight: 500;
-  color: #2d3748;
-  transition: background-color 0.3s ease;
+  font-weight: 400;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  user-select: none;
 }
 
 .collapse-btn:hover {
-  background-color: #f7fafc;
+  background: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.collapse-btn:active {
+  background: #0a58ca;
+  border-color: #0a53be;
 }
 
 .collapse-btn:focus {
-  outline: none;
-  background-color: #edf2f7;
-}
-
-.arrow {
-  font-size: 14px;
-  transition: transform 0.3s ease;
-  display: inline-block;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 .collapse-body {
   max-height: 0;
   overflow: hidden;
-  transition:
-    max-height 0.3s ease-in-out,
-    opacity 0.3s ease-in-out;
-  opacity: 0;
-  background: #f7fafc;
+  transition: max-height 0.35s ease;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.collapse-body.open {
+  max-height: 500px; /* Достаточно для любого контента */
 }
 
 .collapse-content {
-  padding: 20px 24px;
-  color: #4a5568;
+  padding: 16px 20px;
+  color: #212529;
   line-height: 1.6;
 }
 
 .collapse-content p {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .collapse-content p:last-child {
@@ -104,21 +102,11 @@ h1 {
 
 .collapse-content ul {
   padding-left: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .collapse-content li {
-  margin-bottom: 8px;
-}
-
-/* Анимация для стрелки */
-.collapse-btn.active .arrow {
-  transform: rotate(180deg);
-}
-
-/* Стили для разных состояний */
-.collapse-container.open .collapse-body {
-  opacity: 1;
+  margin-bottom: 6px;
 }
 
 /* Адаптивность */
@@ -133,12 +121,12 @@ h1 {
   }
 
   .collapse-btn {
-    padding: 14px 20px;
-    font-size: 15px;
+    padding: 6px 14px;
+    font-size: 14px;
   }
 
   .collapse-content {
-    padding: 16px 20px;
+    padding: 14px 16px;
   }
 }
 
